@@ -9,3 +9,7 @@ If desired, you can modify the currencies to be displayed and the currency for w
 - The constant `TARGET_COIN` is the currency for which the currencies to be searched for are to be calculated. You can assume the values `BRL, USD and EUR`
 
 **The default values will display all possible currencies quoted in BRL.**
+
+## Run
+
+To start viewing, it is necessary that you have Python 3 installed on your machine and that you have access to the internet. Knowing this, run the command `python3 main.py`.
