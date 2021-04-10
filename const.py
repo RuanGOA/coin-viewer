@@ -1,6 +1,6 @@
 '''consts
 '''
-TARGET_COIN = ''
+TARGET_COIN = 'BRL'
 
 COINS_TO_SEARCH = []
 
