@@ -24,12 +24,12 @@ def print_quots(response, quots_cache):
     '''
     items_request = response.items()
 
-    print('-'*66)
-    print_formated_quot(COLUMN_NAMES)
-    print('-'*66)
+    print('-'*78)
+    print_formated_line(COLUMN_NAMES, True)
+    print('-'*78)
     for item in items_request:
         format_quot(item[0], item[1], quots_cache.get(item[0]))
-    print('-'*66)
+    print('-'*78)
 
 
 def format_quot(name, infos, last_avg):
@@ -50,23 +50,29 @@ def format_quot(name, infos, last_avg):
 
     formated_quot = [
         name,
-        f'{str(high)} {TARGET_COIN}',
-        f'{str(low)} {TARGET_COIN}',
-        f'{str(avg)} {TARGET_COIN}',
+        f'{str(high)}',
+        f'{str(low)}',
+        f'{str(avg)}',
         state_avg
     ]
 
-    print_formated_quot(formated_quot)
+    print_formated_line(formated_quot)
 
 
-def print_formated_quot(lis):
+def print_formated_line(lis, isTitle=False):
     '''From the formatted response values, displays the formatted
     result on the screen.
     '''
-    print(
-        '| %-5s | %-12s | %-12s | %-12s | %-9s |' % \
-        (lis[0], lis[1], lis[2], lis[3], lis[4])
-    )
+    if isTitle:
+        print(
+            f'| %-5s | %-16s | %-16s | %-16s | %-9s |' % \
+            (lis[0], lis[1], lis[2], lis[3], lis[4])
+        )
+    else:
+        print(
+            f'| %-5s | %-12s {TARGET_COIN} | %-12s {TARGET_COIN} | %-12s {TARGET_COIN} | %-9s |' % \
+            (lis[0], lis[1], lis[2], lis[3], lis[4])
+        )
 
 
 def generate_json_cache(quots):
