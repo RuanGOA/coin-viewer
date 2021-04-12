@@ -10,6 +10,24 @@ If desired, you can modify the currencies to be displayed and the currency for w
 
 **The default values will display all possible currencies quoted in BRL.**
 
+## Currency codes and names 
+
+- **USD** (United States Dollar)
+- **CAD** (Canadian Dollar)
+- **AUD** (Australian Dollar)
+- **EUR** (Euro)
+- **GBP** (British Pound)
+- **ARS** (Argentine Peso)
+- **JPY** (Japanese Yen)
+- **CHF** (Swiss Franc)
+- **CNY** (Chinese Yuan)
+- **YLS** (Israeli New Shekel)
+- **BTC** (Bitcoin)
+- **LTC** (Litecoin)
+- **ETH** (Ethereum)
+- **XRP** (Ripple)
+- **BRL** (Brazilian Real)
+
 ## Run
 
 To start viewing, it is necessary that you have Python 3 installed on your machine and that you have access to the internet. Knowing this, run the command `python3 main.py`.
